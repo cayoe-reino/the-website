@@ -1,20 +1,23 @@
----
-const platform = "github";
-const username = "withastro";
-import Social from './social.astro';
----
+
+<div>
+  <p>may peace find you in every way</p>
+</div>
 
 <style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
+  div{
+    height: 100px;
+    background-color: rebeccapurple;
+    position: relative;
+  }
+  p{
+    background-color: darkgrey;
+    color: rgb(50, 50, 115);
+    margin: 5px;
+    padding-inline: 4px;
+    padding-bottom: 2px;
+    text-align: right;
+    position: absolute;
+    bottom:0;
+    right:0;
   }
 </style>
-
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
-</footer>
