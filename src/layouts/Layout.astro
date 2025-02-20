@@ -1,9 +1,12 @@
 ---
 import Header from '../components/header.astro';
-import Footer from '../components/Footer.astro';
-import Menu from '../components/Menu.astro'
+import Footer from '../components/footer.astro';
+import Menu from '../components/menu.astro'
 import '../styles/margins.css'
 import '../styles/global.css'
+import Links from '../components/bloglinks.astro'
+import About from '../components/about.astro'
+
 ---
 
 <!doctype html>
@@ -20,8 +23,12 @@ import '../styles/global.css'
 		<Header/>
 
 		<div class="outer">
-			<Menu/>	
-			<div class="doc"><slot/></div>
+			<Menu class="menu"/>	
+			<div class="doc">
+				<div class="slot">
+					<slot/>		
+				</div>			
+			</div>
 		</div>
 
 		<Footer/>
@@ -30,13 +37,40 @@ import '../styles/global.css'
 
 
 <style>
+	.slot{
+		background-color: rgb(202, 202, 202);
+    	width: fit-content;
+    	height: fit-content;
+    	border: 10px;
+    	border-style: ridge;
+    	border-color:  #242424; 
+		width: 80%;
+		text-wrap: wrap;
+	}
+	.boxes{
+		display: flex;
+		flex-direction: row;
+	}
 	.outer {
 		display:flex;
 		flex-direction: row;
 	}
 	.doc{
+		background-image: url("../assets/backg.jpg");
+		background-size: cover;
 		width: 100%;
 		flex-wrap: wrap;
 		text-wrap: wrap;
 	}
+
+	@media only screen and (max-width: 600px) {
+  		.slot{
+   			width: 100%;
+  		}
+		  .doc{
+    padding-bottom: 50vh;
+  }
+
+	}
+	
 </style>

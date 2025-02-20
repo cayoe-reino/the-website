@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+import Layout from '../layouts/Layout.astro'
+import Links from '../components/bloglinks.astro'
+import About from '../components/about.astro'
+---
+
+<Layout>
+
+<h2>:this is a header!</h2>
+
+<hr>
+
+<p>i am cayoe and this is my webbesite</p>
+
+<hr>
+
+<div class="boxes">
+    <About/>
+    <Links/>
+</div>
+
+</Layout>
+
+<style>
+    .boxes{
+		display: flex;
+		flex-direction: row;
+	}
+</style>

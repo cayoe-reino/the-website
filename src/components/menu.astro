@@ -1,0 +1,49 @@
+---
+import Nav from './nav.astro'
+import Social from './social.astro'
+---
+
+<div class="menu">
+    <h3>:navbar:</h3>
+
+    <ul><Nav/></ul>
+    
+    <h3>:links:</h3>
+    
+    <ul><Social/></ul>
+</div>
+
+<style>
+    @media only screen and (max-width: 600px) {
+        div{
+            width: 100vw;
+        }
+        h3{
+            visibility:collapse;
+        }
+        ul{
+            visibility: collapse;
+        }
+    }
+
+    h3{
+    text-align: center;
+    }
+
+    div{
+    background-color: #505050;
+    width: 220px;
+    text-align: center;
+    padding-bottom: 50%;
+    }
+
+    ul{
+    border-width: 6px;
+    border-style: ridge;
+    border-color: #242424;
+    background-color: gray;
+    width: 90%;
+    margin:auto;
+    }   
+</style>
+

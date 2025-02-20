@@ -1,4 +1,52 @@
+
 html{
   height: 100vh;
-  font-family: monospace;
+  font-family: routed-gothic;
+}
+
+h2{
+  margin: 10px;
+  text-align: center;
+}
+
+p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.navbutton{
+    border: 1px inset;
+    background-color: gray;
+    margin: 2%;
+    padding: 8px;
+    display:block;
+    transition: 0.5s;
+    color: inherit;
+    text-decoration: inherit; 
+}
+
+.navbutton:hover{
+    background-color: rgb(202, 202, 202);
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+	.menu{
+		display: none;
+	}
+
+  .doc{
+    padding-bottom: 50vh;
+  }
+}
+
+@font-face {
+  font-family: routed-gothic;
+  src: url("../assets/fonts/routed-gothic-ttf-v1.0.0/routed-gothic.ttf");
+}
+@font-face {
+  font-family: routed-gothic;
+  src: url("../assets/fonts/routed-gothic-ttf-v1.0.0/routed-gothic-wide.ttf");
+  font-weight: bold;
 }
