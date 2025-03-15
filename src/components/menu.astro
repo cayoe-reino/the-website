@@ -1,16 +1,17 @@
 ---
 import Nav from './nav.astro'
 import Social from './social.astro'
+import "../styles/nav.css"
 ---
 
 <div class="menu">
     <h3>:navbar:</h3>
 
-    <ul><Nav/></ul>
+    <ul class="menulist"><Nav/></ul>
     
     <h3 class="hide">:links:</h3>
     
-    <ul class="hide"><Social/></ul>
+    <ul class="hide menulist"><Social/></ul>
 </div>
 
 <style>
@@ -21,19 +22,11 @@ import Social from './social.astro'
 
     div{
     background-color: #505050;
-    width: 150px;
+    width: 180px;
     text-align: center;
     padding-bottom: 50%;
     }
-
-    ul{
-    border-width: 5px;
-    border-style: outset;
-    border-color: #1a1a1a;
-    background-color: gray;
-    width: 90%;
-    margin:auto;
-    }   
+    
     @media only screen and (max-width: 700px) {
         h3{
             font-size: 5vh;

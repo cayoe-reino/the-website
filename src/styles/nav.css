@@ -1,0 +1,36 @@
+.menu .menulist {
+    border-width: 5px;
+    border-style: outset;
+    border-color: #383838;
+    background-color: gray;
+    width: 90%;
+    margin:auto;
+}
+
+.navbutton{
+    border: 1px black outset;
+    background-color: gray;
+    margin: 2%;
+    padding: 8px;
+    display:block;
+    transition: 0.2s;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.navbutton:hover{
+    background-color: rgb(202, 202, 202);
+}
+.navbutton:active{
+    border: 1px black inset;
+}
+
+.navbutton.blue:hover{
+    background-color: #1185fe;
+}
+.navbutton.rav:hover{
+    background-color: #ee6e62;
+}
+.navbutton.git:hover{
+    background-color: orange;
+}

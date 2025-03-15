@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Props {
+    title: string;
+    description: string;
+    date: Date;
+}
+
+const { title, description, date} = Astro.props;
+const dateStr = date.toISOString().split("T")[0];
+
+---
+
+<Layout
+title={title}
+description={description}>
+    <slot/>
+</Layout>
