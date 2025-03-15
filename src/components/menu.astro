@@ -8,23 +8,12 @@ import Social from './social.astro'
 
     <ul><Nav/></ul>
     
-    <h3>:links:</h3>
+    <h3 class="hide">:links:</h3>
     
-    <ul><Social/></ul>
+    <ul class="hide"><Social/></ul>
 </div>
 
 <style>
-    @media only screen and (max-width: 600px) {
-        div{
-            width: 100vw;
-        }
-        h3{
-            visibility:collapse;
-        }
-        ul{
-            visibility: collapse;
-        }
-    }
 
     h3{
     text-align: center;
@@ -32,18 +21,47 @@ import Social from './social.astro'
 
     div{
     background-color: #505050;
-    width: 220px;
+    width: 150px;
     text-align: center;
     padding-bottom: 50%;
     }
 
     ul{
-    border-width: 6px;
-    border-style: ridge;
-    border-color: #242424;
+    border-width: 5px;
+    border-style: outset;
+    border-color: #1a1a1a;
     background-color: gray;
     width: 90%;
     margin:auto;
     }   
+    @media only screen and (max-width: 700px) {
+        h3{
+            font-size: 5vh;
+            float: right;
+            position: absolute;
+            top: 20%;
+            right: 0;
+            margin-right: 5px;
+        }
+        ul{
+            border-width: 6px;
+            border-style: none;
+            border-color: #242424;
+            background-color: inherit;
+            width: fit-content;
+            margin: 5px;
+            float: left;
+            display: flex;
+        }
+        .menu{
+            width: 100vw;
+            height: fit-content;
+            padding: 0;
+            position: relative;
+	    }
+        .hide{
+            display: none;
+        }
+    }
 </style>
 

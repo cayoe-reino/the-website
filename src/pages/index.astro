@@ -8,24 +8,38 @@ import About from '../components/about.astro'
 
 <Layout>
 
-<h2>:this is a header!</h2>
-
-<hr>
-
-<p>i am cayoe and this is my webbesite</p>
-
-<hr>
-
 <div class="boxes">
-    <About/>
+    <div class="test">
+        <h2>:welcome!</h2>
+
+        <hr>
+
+        <p>i am cayoe and this is my webbesite</p>
+
+        <hr>
+
+        <About/> 
+    </div>   
     <Links/>
 </div>
 
 </Layout>
 
 <style>
+    .test{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .boxes{
 		display: flex;
 		flex-direction: row;
 	}
+    @media only screen and (max-width: 700px) {
+
+  .boxes{
+		flex-direction: column;
+        width: 100%;
+	}
+}
 </style>

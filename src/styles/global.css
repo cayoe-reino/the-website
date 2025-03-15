@@ -12,11 +12,12 @@ h2{
 p{
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 10px;
   text-align: center;
 }
 
 .navbutton{
-    border: 1px inset;
+    border: 1px outset;
     background-color: gray;
     margin: 2%;
     padding: 8px;
@@ -28,17 +29,31 @@ p{
 
 .navbutton:hover{
     background-color: rgb(202, 202, 202);
-    border: 1px solid black;
+
+}
+.navbutton.blue:hover{
+  background-color: #1185fe;
+}
+.navbutton.rav:hover{
+  background-color: #ee6e62;
+}
+.navbutton.git:hover{
+  background-color: orange;
 }
 
 @media only screen and (max-width: 600px) {
-	.menu{
-		display: none;
-	}
+  .navbutton{
+    flex-direction: row;
+    margin-right: 0px;
+  }
 
   .doc{
     padding-bottom: 50vh;
   }
+
+  .boxes{
+		flex-direction: column;
+	}
 }
 
 @font-face {

@@ -23,8 +23,11 @@ import About from '../components/about.astro'
 		<Header/>
 
 		<div class="outer">
-			<Menu class="menu"/>	
+
 			<div class="doc">
+				
+				<Menu class="menu"/>
+
 				<div class="slot">
 					<slot/>		
 				</div>			
@@ -35,41 +38,44 @@ import About from '../components/about.astro'
 	</body>
 </html>
 
-
 <style>
 	.slot{
 		background-color: rgb(202, 202, 202);
     	width: fit-content;
     	height: fit-content;
-    	border: 10px;
-    	border-style: ridge;
-    	border-color:  #242424; 
-		width: 80%;
+    	border: 5px;
+    	border-style: outset;
+    	border-color:  #8e8e8e; 
+		width: 70%;
 		text-wrap: wrap;
 	}
-	.boxes{
+	.doc{
 		display: flex;
 		flex-direction: row;
-	}
-	.outer {
-		display:flex;
-		flex-direction: row;
-	}
-	.doc{
 		background-image: url("../assets/backg.jpg");
 		background-size: cover;
 		width: 100%;
-		flex-wrap: wrap;
+		flex-wrap: wrap;	
 		text-wrap: wrap;
 	}
 
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 740px) {
+  		.slot{
+   			width: 60%;
+  		}
+		  .doc{
+   			padding-bottom: 50vh;
+  		}
+
+	}
+
+	@media only screen and (max-width: 700px) {
   		.slot{
    			width: 100%;
   		}
 		  .doc{
-    padding-bottom: 50vh;
-  }
+   			padding-bottom: 50vh;
+  		}
 
 	}
 	
